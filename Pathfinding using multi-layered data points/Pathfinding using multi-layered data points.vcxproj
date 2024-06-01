@@ -139,7 +139,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="MultiLayeredDataPoint.cpp" />
     <ClCompile Include="Pathfinding using multi-layered data points.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="SmartMultiLayeredDataPoint.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="API.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="FactorySelectTypeDataPoint.h" />
+    <ClInclude Include="MultiLayeredDataPoint.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="SmartMultiLayeredDataPoint.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

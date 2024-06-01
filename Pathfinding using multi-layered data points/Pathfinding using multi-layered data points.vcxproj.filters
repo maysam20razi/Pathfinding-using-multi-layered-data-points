@@ -13,10 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="scr">
+      <UniqueIdentifier>{8d94ab4a-a878-4871-ad88-776d9762f980}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pathfinding using multi-layered data points.cpp">
+    <ClCompile Include="MultiLayeredDataPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pathfinding using multi-layered data points.cpp">
+      <Filter>scr</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>scr</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>scr</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartMultiLayeredDataPoint.cpp">
+      <Filter>scr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MultiLayeredDataPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="API.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartMultiLayeredDataPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FactorySelectTypeDataPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

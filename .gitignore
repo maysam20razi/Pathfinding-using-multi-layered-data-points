@@ -4,3 +4,12 @@
 *.db-shm
 *.db-wal
 *.opendb
+*.obj
+*.exe
+*.pdb
+*.recipe
+*.ilk
+*.log
+*.idb
+*.tlog
+*.lastbuildstate

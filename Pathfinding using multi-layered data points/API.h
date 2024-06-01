@@ -1,8 +1,8 @@
 #pragma once
 
 
-namespace DataPoints {
-	void Setup() {
+namespace DataPoints{
+	namespace API {
 
 	}
 }

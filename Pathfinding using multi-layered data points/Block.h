@@ -1,9 +1,10 @@
 #pragma once
 
+#include "FactorySelectTypeDataPoint.h"
 #include "MultiLayeredDataPoint.h"
 #include <vector>
 #include <memory>
-
+using ArrayPtr = std::vector<std::unique_ptr<MultiLayeredDataPoint>>;
 class Block
 {
 	/*
@@ -13,7 +14,7 @@ class Block
 	1. function GetCuurentDataPoint For inside search
 	2. Best Find datapoint for pathfinding 
 	*/ 
-	using ArrayPtr = std::vector<std::unique_ptr<MultiLayeredDataPoint>>;
+	
 private :
 	ArrayPtr DataPoints;
 public :
@@ -22,11 +23,12 @@ public :
 		return *DataPoints[0];
 	}
 	
-	ArrayPtr FindsAllDataPointNetwork() {
-		ArrayPtr DP;
-		return DP;
-	}
-	
-	
+	ArrayPtr FindsAllDataPointNetwork();
+	/*
+	*/
+	void GenerateMultiLayeredDataPoints(DataPoints::TypeDataPoint type);
+
+private :
+	void AddToStorageDataPoint(MultiLayeredDataPoint& dataPoint);
 };
 
