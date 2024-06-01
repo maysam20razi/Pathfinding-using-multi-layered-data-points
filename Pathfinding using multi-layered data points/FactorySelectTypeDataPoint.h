@@ -2,7 +2,9 @@
 
 #include "MultiLayeredDataPoint.h"
 #include "SmartMultiLayeredDataPoint.h"
-
+/*
+data point types
+*/
 namespace DataPoints {
 	enum class TypeDataPoint
 	{

@@ -16,3 +16,9 @@ void Block::AddToStorageDataPoint(MultiLayeredDataPoint& dataPoint)
 {
 	DataPoints.push_back(std::make_unique<MultiLayeredDataPoint>(dataPoint));
 }
+
+
+void Block::DistributeMultiLayeredDataPoints()
+{
+	
+}
