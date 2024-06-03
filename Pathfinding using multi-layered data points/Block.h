@@ -1,10 +1,11 @@
 #pragma once
 
-#include "FactorySelectTypeDataPoint.h"
-#include "MultiLayeredDataPoint.h"
+
+#include "DistuributionMLDP.h"
+#include "Vector.h"// vector math
 #include <vector>
 #include <memory>
-using ArrayPtr = std::vector<std::unique_ptr<MultiLayeredDataPoint>>;
+
 class Block
 {
 	/*============================================================================
@@ -15,26 +16,38 @@ class Block
 	2. Best Find datapoint for pathfinding 
 	============================================================================*/ 
 	
+
 	/*============================================================================
-	MLDP : Non-uniform and uniform distribution 
+	DistuributionMLDP :
+	Non-uniform and uniform distribution 
 	generate non-uniform MLDP 
 	============================================================================*/
 	
 private :
-	ArrayPtr DataPoints;
+	DistuributionMLDP distributeMultiLayeredDataPoints;
+	
+private :
+	MLDPPtrs FindsAllDataPointNetwork();
+	
 public :
 
-	MultiLayeredDataPoint& GetCurrentDataPoint() {
-		return *DataPoints[0];
-	}
-	
-	ArrayPtr FindsAllDataPointNetwork();
-	/*
-	*/
-	
+	/*============================================================================
+			API
+	============================================================================*/
+
+	std::vector<Vector3D> FindWay3D(Vector3D StartLocation, Vector3D EndLocation);
+	std::vector<Vector2D> FindWay2D(Vector2D StartLocation, Vector2D EndLocation);
+
+	template<typename T>
+		bool DoesFindWay(T startLocation , T endLocation);
 	void DistributeMultiLayeredDataPoints();
-	void GenerateMultiLayeredDataPoints(DataPoints::TypeDataPoint type);
-private :
-	void AddToStorageDataPoint(MultiLayeredDataPoint& dataPoint);
+
+	
+
 };
 
+template<typename T>
+inline bool Block::DoesFindWay(T startLocation, T endLocation)
+{
+	return false;
+}

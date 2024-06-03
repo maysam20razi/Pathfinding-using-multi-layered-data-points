@@ -1,22 +1,23 @@
 #include "Block.h"
 
-ArrayPtr Block::FindsAllDataPointNetwork()
+
+
+
+
+MLDPPtrs Block::FindsAllDataPointNetwork()
 {
-	ArrayPtr DP;
-	return DP;
+	return MLDPPtrs();
 }
 
-void Block::GenerateMultiLayeredDataPoints(DataPoints::TypeDataPoint type)
+std::vector<Vector3D> Block::FindWay3D(Vector3D StartLocation, Vector3D EndLocation)
 {
-	MultiLayeredDataPoint dataPoint = DataPoints::SelectorDataPoint(type);
-	AddToStorageDataPoint(dataPoint);
+	return std::vector<Vector3D>();
 }
 
-void Block::AddToStorageDataPoint(MultiLayeredDataPoint& dataPoint)
+std::vector<Vector2D> Block::FindWay2D(Vector2D StartLocation, Vector2D EndLocation)
 {
-	DataPoints.push_back(std::make_unique<MultiLayeredDataPoint>(dataPoint));
+	return std::vector<Vector2D>();
 }
-
 
 void Block::DistributeMultiLayeredDataPoints()
 {
