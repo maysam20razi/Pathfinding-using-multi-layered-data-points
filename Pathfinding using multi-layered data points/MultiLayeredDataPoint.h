@@ -1,13 +1,16 @@
 #pragma once
 #include "Node.h";
+#include "InnerMLDP.h"
+#include "OuterMLDP.h"
 
 class MultiLayeredDataPoint
 {
 public :
-	void InputEdgeIndex(int point);
-
+	OuterMLDP* GetOuter();
+	InnerMLDP* GetInner();
 private :
-	int static PointsNumber;
-
+	//components for Multi-layered data points
+	OuterMLDP outer;
+	InnerMLDP inner;
 };
 

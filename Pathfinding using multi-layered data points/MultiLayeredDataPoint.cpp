@@ -1,5 +1,11 @@
 #include "MultiLayeredDataPoint.h"
 
-void MultiLayeredDataPoint::InputEdgeIndex(int point)
+OuterMLDP* MultiLayeredDataPoint::GetOuter() 
 {
+	return &outer;
+}
+
+InnerMLDP* MultiLayeredDataPoint::GetInner()
+{
+	return &inner;
 }

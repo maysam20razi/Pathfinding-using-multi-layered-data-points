@@ -8,6 +8,10 @@
 
 class Block
 {
+private: 
+	static Block* blockPtr;
+public :
+	static Block* GetInstanceBlock();
 	/*============================================================================
 	Storage of  MLDP(Multi-layeredDataPoints)
 	single object in game singlton pattern implamate
@@ -24,6 +28,7 @@ class Block
 	============================================================================*/
 	
 private :
+	Block();
 	DistuributionMLDP distributeMultiLayeredDataPoints;
 	
 private :

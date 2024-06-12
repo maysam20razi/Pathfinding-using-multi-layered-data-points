@@ -1,8 +1,18 @@
 #include "Block.h"
 
 
-
-
+Block* Block::GetInstanceBlock() 
+{
+	if (blockPtr != nullptr)
+		return blockPtr;
+	
+	else
+	{
+		blockPtr = new Block();
+		return blockPtr;
+	}
+	
+}
 
 MLDPPtrs Block::FindsAllDataPointNetwork()
 {
